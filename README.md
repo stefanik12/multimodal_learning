@@ -18,3 +18,8 @@ pip install -r requirements.txt
 
 Make sure to include the dependencies that you'd install locally into requirements.txt. You can just copy the name of the library that you install using pip.
 
+### Resources:
+
+[9.5. meeting notes](https://docs.google.com/document/d/1asq5LpirCd76nbM4B01lf5Mkl4MHBOsUfat7PiMrAtI/edit?usp=sharing)
+
+[trelo dashboard](https://trello.com/b/dajXkcG2/uvod-do-ml)
