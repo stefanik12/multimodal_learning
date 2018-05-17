@@ -1,0 +1,1 @@
+Spusť tf-idf zo shellu s parametrami inputFile stopwordlist
