@@ -1,3 +1,15 @@
+"""
+Usage:
+
+import doc2vec_wrapped
+vectors_series = doc2vec_wrapped.vectorize_content(vector_len=400)
+
+# output is Series format, all keys are in vectors_series.index,
+# you can retrieve particular vector with:
+print(vectors_series["000000154087.jpg"])
+
+"""
+
 import pandas as pd
 from collections import namedtuple
 from gensim.utils import simple_preprocess
