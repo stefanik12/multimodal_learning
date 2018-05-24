@@ -23,3 +23,5 @@ Make sure to include the dependencies that you'd install locally into requiremen
 [9.5. meeting notes](https://docs.google.com/document/d/1asq5LpirCd76nbM4B01lf5Mkl4MHBOsUfat7PiMrAtI/edit?usp=sharing)
 
 [trelo dashboard](https://trello.com/b/dajXkcG2/uvod-do-ml)
+
+[Google's word2vec model (1.5GB)](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit)
