@@ -39,11 +39,6 @@ def vectorize_content():
     df["vectors"] = df.apply(lambda row: get_vectors(row["words"]), axis=1)
     df["vector_avg"] = df.apply(lambda row: list(np.average(np.array(row["vectors"]), axis=0)), axis=1)
 
-    CategorizedDocument = namedtuple('CategorizedDocument', 'words tags category')
-    df["vocab_docs"] = df.apply(lambda row: CategorizedDocument(simple_preprocess(row["captions"]),
-                                                                [row["category"]],
-                                                                row["category"]), axis=1)
-
     out_series = pd.Series(df["vector_avg"].values, index=df["file_name"].values)
 
     return out_series
