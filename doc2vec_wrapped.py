@@ -19,11 +19,11 @@ from gensim.models import doc2vec
 import logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-content_dir = "data/COCO/coc-easier"
+content_dir = "data/COCO/coco-easier.txt"
 
 
 def vectorize_content(vector_len=400):
-    df = pd.read_json("data/COCO/coco-easier.txt",
+    df = pd.read_json(content_dir,
                       lines=True)
     df["captions"] = df["captions"].apply(lambda sents: " ".join(sents))
 
