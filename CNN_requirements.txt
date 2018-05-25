@@ -1,0 +1,13 @@
+Representation CNN:
+tensorflow
+numpy
+tarfile
+six.moves
+
+Classification CNN:
+tensorflow
+numpy
+argparse
+re
+six.move
+
