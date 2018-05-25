@@ -7,7 +7,11 @@
 import glob, os
 import tarfile
 import sys
+<<<<<<< HEAD
 import json
+=======
+
+>>>>>>> 73cfe2021a01978690e2732661fd92fa8f85acd5
 import numpy as np
 import tensorflow as tf
 
@@ -17,7 +21,11 @@ from six.moves import urllib
 # In[2]:
 
 
+<<<<<<< HEAD
 model_dir = './model'
+=======
+model_dir = '/model'
+>>>>>>> 73cfe2021a01978690e2732661fd92fa8f85acd5
 model_name = 'classify_image_graph_def.pb'
 data_dir = './data/COCO/easier'
 
@@ -54,9 +62,16 @@ def maybe_download_and_extract():
 
 
 def load_data():
+<<<<<<< HEAD
     image_files = []
     
     for file in glob.glob(data_dir + "/*.jpg"):
+=======
+    os.chdir(data_dir)
+    image_files = []
+    
+    for file in glob.glob("*.jpg"):
+>>>>>>> 73cfe2021a01978690e2732661fd92fa8f85acd5
         image_files.append(file)
         
     return image_files
@@ -101,6 +116,7 @@ def run_inference_on_image(image):
 
 # In[7]:
 
+<<<<<<< HEAD
 def run_inference_on_images(images):
     """Runs inference on an image.
     Args:
@@ -128,14 +144,30 @@ def run_inference_on_images(images):
 
 # if the model is already downloaded, comment this
 # maybe_download_and_extract()
+=======
+
+# if the model is already downloaded, comment this
+maybe_download_and_extract()
+
+>>>>>>> 73cfe2021a01978690e2732661fd92fa8f85acd5
 
 # In[ ]:
 
 
 image_files = load_data()
+<<<<<<< HEAD
 
 run_inference_on_images(image_files)
 
 
 
+=======
+result_dic = {}
+
+for image in image_files:
+    description = run_inference_on_image(image)
+    result_dic[image] = description.flatten()
+    
+    print(result_dic[image])
+>>>>>>> 73cfe2021a01978690e2732661fd92fa8f85acd5
 
