@@ -18,8 +18,8 @@ def concatenate(vector1, vector2):
 import doc2vec_wrapped
 import word2vec_wrapped
 import pandas as pd
-import for_each_file
-import for_each_file
+import inception_for_each_file
+
 
 def concat_ser_dic(series1, series2):
     if isinstance(series1, dict):
@@ -36,18 +36,12 @@ def doc2vec_word2vec():
     return concat_ser_dic(doc2vec_wrapped.vectorize_content(vector_len=400), word2vec_wrapped.vectorize_content())
 
 def doc2vec_inception():
-    return concat_ser_dic(doc2vec_wrapped.vectorize_content(vector_len=400), for_each_file("./data/Pascal_VOC_images"))
+    return concat_ser_dic(doc2vec_wrapped.vectorize_content(vector_len=400), inception_for_each_file("./data/Pascal_VOC_images"))
     
 def word2vec_inception():
-    return concat_ser_dic(word2vec_wrapped.vectorize_content(), for_each_file("./data/Pascal_VOC_images"))
+    return concat_ser_dic(word2vec_wrapped.vectorize_content(), inception_for_each_file("./data/Pascal_VOC_images"))
 
 def doc2vec_word2vec_inception():
     tmp = concat_ser_dic(doc2vec_wrapped.vectorize_content(vector_len=400), word2vec_wrapped.vectorize_content())
-    return concat_ser_dic(tmp, for_each_file("./data/Pascal_VOC_images"))
-
-
-# In[3]:
-
-
-print(len(doc2vec_word2vec()))
+    return concat_ser_dic(tmp, inception_for_each_file("./data/Pascal_VOC_images"))
 
