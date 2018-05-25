@@ -1,10 +1,10 @@
-Representation CNN:
+#RepresentationCNN:
 tensorflow
 numpy
 tarfile
 six.moves
 
-Classification CNN:
+#ClassificationCNN:
 tensorflow
 numpy
 argparse

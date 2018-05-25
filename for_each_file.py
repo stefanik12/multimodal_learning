@@ -1,18 +1,22 @@
 
 # coding: utf-8
 
-# In[6]:
+# In[ ]:
 
 
 import os
+import InceptionV3_conv
 def for_each_file(dirname):
     newdic = {}
     for filename in os.listdir(dirname):
-        print(filename)
-        ##newdic[filename] = callthecommandhere(blablahbla, filename, foo)   Get value from your funcion that returns vector for that image.
-    return ##newdic
+        
+        newdic[filename] = description.flatten()
+    return newdic
 
-for_each_file("./data/Pascal_VOC_images")
 
-## Remove print and uncomment newdic lines, change callthecommandhere for your function
+
+# In[ ]:
+
+
+print(for_each_file("./data/Pascal_VOC_images"))
 
