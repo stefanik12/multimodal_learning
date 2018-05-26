@@ -111,7 +111,7 @@ def run_inference_on_images(images):
 
     # Creates graph from saved GraphDef.
     create_graph()
-
+    count = 0
     with tf.Session() as sess:
         pool_tensor = sess.graph.get_tensor_by_name('pool_3:0')
 
@@ -120,14 +120,18 @@ def run_inference_on_images(images):
                 image_data = tf.gfile.FastGFile(image, 'rb').read()
 
                 description = sess.run(pool_tensor, {'DecodeJpeg/contents:0': image_data})
-                json.dump({image.rsplit('/', 1)[-1]: description.flatten().tolist()}, outfile)
+                count += 1
+
+                json.dump({'image' : image.rsplit('/', 1)[-1], 'vector' : description.flatten().tolist()}, outfile)
+
+                print("Image " + image.rsplit('/', 1)[-1] + " processed - " + str(count))
                 outfile.write('\n')
 
 
         return
 
 # if the model is already downloaded, comment this
-# maybe_download_and_extract()
+#maybe_download_and_extract()
 
 # In[ ]:
 
