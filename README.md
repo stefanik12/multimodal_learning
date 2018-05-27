@@ -25,3 +25,5 @@ Make sure to include the dependencies that you'd install locally into requiremen
 [trelo dashboard](https://trello.com/b/dajXkcG2/uvod-do-ml)
 
 [Google's word2vec model (1.5GB)](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit)
+
+[Inception output vectors](https://l.messenger.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F116ueOn9GyHof0RIQzYKqNwHXZ08co3W0%2Fview%3Fusp%3Dsharing&h=ATPbpWUeN_8vzBILuAjlGZbNoxeYtkVwzI94c8fpYG_k9Nfb0pHZI4lVSMOHw4ktx3ZGVUqlurX1w3JAePQcVSwUjG95g7A2MoP4CmbnktZ7)
