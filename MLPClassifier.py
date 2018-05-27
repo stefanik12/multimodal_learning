@@ -177,7 +177,7 @@ def word2vec_doc2vec_inception_class():
     cross_val_accuracy(clf, df)
 
 
-# In[ ]:
+# In[9]:
 
 
 doc2vec_inception_class()
